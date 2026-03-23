@@ -44,12 +44,10 @@ const LandingPage = () => {
       `
         }}>
 
-            {/* Navbar */}
             <div className="navigation-bar">
                 <NavBar />
             </div>
 
-            {/* Hero */}
             <div className="flex flex-col items-center text-center px-6 pt-20 pb-10">
                 <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                     Find <span className="text-cyan-400">World Class</span> <br />
@@ -69,7 +67,6 @@ const LandingPage = () => {
                     />
                 </div>
 
-                {/* Buttons */}
                 <div className="flex gap-6 mt-10">
                     <NavLink to="/browse">
                         <button className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-[18px] px-8 py-3 rounded-xl transition-all hover:scale-[1.04]">
@@ -83,7 +80,6 @@ const LandingPage = () => {
                     </NavLink>
                 </div>
 
-                {/* Stats */}
                 <div className="flex gap-12 justify-center mt-14 border-t border-white/10 pt-10 w-full max-w-md">
                     <div className="text-center">
                         <p className="text-3xl font-bold text-cyan-400">2.4k+</p>
@@ -100,7 +96,6 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            {/* Why FolioHub */}
             <div className="text-white flex flex-col gap-10 mt-10 mx-12 rounded-2xl bg-[#36454F]/50 mb-5 p-8">
                 <div className="text-[25px] font-bold">
                     Why <span className="text-cyan-400">Folio</span>
@@ -125,7 +120,6 @@ const LandingPage = () => {
                 </div>
             </div>
 
-            {/* Featured Freelancers */}
             <div className="px-12 py-16 text-white">
                 <div className="text-center mb-10">
                     <span className="text-cyan-400 text-sm font-semibold tracking-widest uppercase">
@@ -139,7 +133,6 @@ const LandingPage = () => {
                     </p>
                 </div>
 
-                {/* Skeleton loader */}
                 {loadingCards ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[...Array(6)].map((_, i) => (
@@ -169,7 +162,6 @@ const LandingPage = () => {
                                 key={user.id}
                                 className="bg-white/5 border border-white/10 hover:border-cyan-500/40 rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02]"
                             >
-                                {/* Avatar + name */}
                                 <div className="flex items-center gap-4 mb-4">
                                     <img
                                         src={user.avatar_url}
@@ -184,12 +176,10 @@ const LandingPage = () => {
                                     </div>
                                 </div>
 
-                                {/* Bio */}
                                 <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-2 min-h-[40px]">
                                     {user.bio || "No bio available"}
                                 </p>
 
-                                {/* Stats */}
                                 <div className="flex gap-4 mb-4 bg-white/5 rounded-xl p-3">
                                     <div className="text-center flex-1">
                                         <p className="text-white font-bold">{user.public_repos}</p>
@@ -205,21 +195,18 @@ const LandingPage = () => {
                                     </div>
                                 </div>
 
-                                {/* Location */}
                                 {user.location && (
                                     <p className="text-gray-400 text-sm mb-2 flex items-center gap-2">
                                         <span className="text-cyan-400">📍</span> {user.location}
                                     </p>
                                 )}
 
-                                {/* Company */}
                                 {user.company && (
                                     <p className="text-gray-400 text-sm mb-4 flex items-center gap-2">
                                         <span className="text-cyan-400">🏢</span> {user.company}
                                     </p>
                                 )}
 
-                                {/* Button */}
 
                                 <a href={user.html_url}
                                     target="_blank"
@@ -233,7 +220,6 @@ const LandingPage = () => {
                     </div>
                 )}
 
-                {/* See all button */}
                 <div className="text-center mt-10">
                     <NavLink to="/browse">
                         <button className="border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold px-10 py-3 rounded-xl transition-all duration-300">
